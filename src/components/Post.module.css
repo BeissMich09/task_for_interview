@@ -1,0 +1,83 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+.postItem {
+    width: 100%;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+}
+
+.item img {
+    width: 261px;
+}
+
+.intagramCard {
+    width: 260px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.35);
+}
+
+.intagramCard p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.username img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.username {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.username p {
+    font-weight: 500;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+}
+
+.withDate {
+    display: flex;
+    align-items: center;
+}
+
+.withDate .date {
+    width: 54%;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.likeCount {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .item {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .item {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 30px;
+    }
+}
