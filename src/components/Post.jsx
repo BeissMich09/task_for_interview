@@ -7,7 +7,7 @@ class Post extends React.Component {
     posts: [],
   };
   componentDidMount() {
-    const token = "Токен внутри .doc";
+    const token = "Токен в документе";
     fetch(
       `https://graph.instagram.com/me/media?fields=caption,id,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=${token}`
     )
@@ -23,13 +23,13 @@ class Post extends React.Component {
   };
 
   render() {
-    if (this.state.posts.length !== 0) {
+    if (this.state.posts.error) {
       return <div>{this.state.posts.error.message} </div>;
     }
     return (
       <div className={style.postItem}>
         <div className={style.item}>
-          {this.state.posts.length !== 0
+          {this.state.posts.data
             ? this.state.posts.data.map((post) => {
                 return (
                   <div key={post.id} className={style.intagramCard}>

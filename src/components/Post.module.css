@@ -80,4 +80,32 @@
         grid-template-columns: auto;
         grid-gap: 30px;
     }
+    .withDate {
+        grid-area: header;
+        border-bottom: black solid 1px;
+    }
+    .intagramCard img {
+        grid-area: photo;
+    }
+    .likeCount {
+        grid-area: like;
+        margin-top: 10px;
+    }
+    .intagramCard p {
+        grid-area: option;
+    }
+    .intagramCard {
+        width: 525px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 25px 13%;
+        grid-template-areas: "photo photo header header" "photo photo like like" "photo photo option option";
+    }
+    @media (max-width: 560px) {
+        .intagramCard {
+            display: block;
+            width: 260px;
+        }
+    }
 }
